@@ -1,0 +1,12 @@
+---
+- name: install multiple packages
+  hosts: all
+  become: true
+  tasks: 
+  - name: install multiple packages using apt
+    ansible.builtin.apt:
+      name:
+        - git
+        - curl
+        - unzip
+      state: present

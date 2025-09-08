@@ -1,3 +1,4 @@
+---
 - name: Test connection with hosts
   hosts: all
   tasks:

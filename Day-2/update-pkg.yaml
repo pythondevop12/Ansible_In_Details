@@ -1,0 +1,19 @@
+---
+- name: update packages and upgrade
+  hosts: all
+  become: true
+  tasks:
+   - name: update the cache
+     ansible.builtin.apt:
+       update_cache: yes
+  
+   - name: install all the packages
+     ansible.builtin.apt:
+       name:
+        - nginx
+        - git
+        - curl
+  
+   - name: upgrade all the packages
+     ansible.builtin.apt:
+      upgrade: dist

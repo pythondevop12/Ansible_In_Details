@@ -1,0 +1,13 @@
+---
+- name: remove all the packages
+  hosts: all
+  become: true
+  tasks:
+  - name: remove all the listed packages below
+    ansible.builtin.apt:
+      name:
+      - nginx
+      - git
+      - curl
+      - unzip
+      state: absent
