@@ -1,0 +1,14 @@
+---
+- name: install tomcat and expose it on 8080 port 
+  hosts: all
+  become: true
+  vars: 
+    tomcat_version = "10.1"
+
+  tasks:
+  - name: to install the tomcat_version
+    apt: 
+     - openjdk-21-jdk
+     - wget
+     - tar
+  - name: 
