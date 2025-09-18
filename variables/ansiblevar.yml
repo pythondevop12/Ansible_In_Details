@@ -1,0 +1,8 @@
+- name: Demo of vars_files
+  hosts: web
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Show variable
+      ansible.builtin.debug:
+        msg: "Installing {{ package_name }}"

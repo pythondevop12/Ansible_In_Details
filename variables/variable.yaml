@@ -1,0 +1,8 @@
+- name: Demo of inline variables
+  hosts: web
+  vars:
+    package_name: httpd
+  tasks:
+    - name: Install package
+      ansible.builtin.debug:
+        msg: "Installing {{ package_name }}"
